@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside the Machine - 3D CPU Parts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Critical CSS to prevent FOUC */
+        body { margin: 0; overflow-x: hidden; background-color: #050505; color: #fff; font-family: 'Inter', sans-serif; }
+        #canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; }
+    </style>
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <main>
+        <section class="hero">
+            <div class="content">
+                <h1>The Heart of Computing</h1>
+                <p>Scroll to explore the components that power your digital world.</p>
+                <div class="scroll-indicator">↓</div>
+            </div>
+        </section>
+
+        <section class="part-section" id="cpu-section">
+            <div class="content right">
+                <h2>Central Processing Unit (CPU)</h2>
+                <p>The brain of the computer. It executes instructions and processes data at billions of cycles per second.</p>
+                <ul class="specs">
+                    <li>Cores: 16</li>
+                    <li>Threads: 32</li>
+                    <li>Clock: 5.2 GHz</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="part-section" id="gpu-section">
+            <div class="content left">
+                <h2>Graphics Processing Unit (GPU)</h2>
+                <p>Specialized for parallel processing. It renders images, video, and powers complex 3D simulations.</p>
+                <ul class="specs">
+                    <li>VRAM: 24GB</li>
+                    <li>Cores: 16384</li>
+                    <li>Ray Tracing: Yes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="part-section" id="ram-section">
+            <div class="content right">
+                <h2>Random Access Memory (RAM)</h2>
+                <p>High-speed temporary storage. It allows the CPU to access data quickly for active applications.</p>
+                <ul class="specs">
+                    <li>Capacity: 64GB</li>
+                    <li>Type: DDR5</li>
+                    <li>Speed: 6000 MT/s</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="footer">
+            <h2>Build Your Dream</h2>
+            <p>Understanding the hardware is the first step to mastery.</p>
+        </section>
+    </main>
+
+    <!-- Import Maps for cleaner imports -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "gsap": "https://unpkg.com/gsap@3.12.5/index.js",
+                "gsap/ScrollTrigger": "https://unpkg.com/gsap@3.12.5/ScrollTrigger.js"
+            }
+        }
+    </script>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
